@@ -36,3 +36,6 @@ artifacts
 
 .vscode/launch.json
 
+# Node Modules
+.node_modules
+.yarn.lock

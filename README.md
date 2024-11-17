@@ -7,8 +7,16 @@ This boilerplate project has WebdriverIO 8 tests with cucumber and typescript, f
 - WebdriverIO v8
 - Cucumber v8
 
-## Features:
+## Test execution:=
+- Checkout the codebase
+- Install the packages using npm install (Yarn is more recommended)
+- Run the tests by using npm run wdio-\* (local/chrome/docker/appium/.......) Please refer the package.json scripts.
 
+## execute demo test case:
+- npm run wdio-demo
+- Report will be generated in artifacts directory
+
+## Features:
 - Typescript v5
 - Page Object Pattern
 - Prettier
@@ -36,29 +44,10 @@ This boilerplate project has WebdriverIO 8 tests with cucumber and typescript, f
 - Visual testing using Applitools
 - Log mechansim
 
-## Test execution:
 
-- Checkout the codebase
-- Install the packages using npm install
-- Run the tests by using npm run wdio-\* (local/chrome/docker/appium/.......) Please refer the package.json scripts.
-
-## Accessibility testing:
-- npm run wdio-ally
-- Report will be generated in artifacts directory
 
 ## Visual testing:
 - npm run wdio-visual
 - Require the applitool licence and either export the Key as an environment variable or update directly in the code, constant file
-
-## Points to consider:
-
-- Use the set/export for setting up the headless option in package.json as per the platform
-- Add/Update browserstack/saucelabs credentials before executing in the cloud
-- Add/Update the app capabilities while executing the native App scenarios
-- Add/Update the capabilities for each service as per the requirement
-- Add/Update the context keys for all the shared data which is easier to track
-- Define the types for any model used in the code
-- Add/Update the generic reused methods in the Page class
-- Add/Update all other utility functions in the utils package
 
 ### Please feel free to update the features and contribute in maintaing this project.

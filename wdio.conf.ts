@@ -50,8 +50,8 @@ let lastSession: string = '';
 let environment: any = await Arguments.getArgumentValue('Env');
 await setValue(ContextKeys.ENVIRONMENT, environment);
 const urls = {
-  dev: 'https://the-internet.herokuapp.com/',
-  test: 'https://the-internet.herokuapp.com/'
+  dev: 'https://www.holidayextras.com/',
+  test: 'https://www.holidayextras.com/'
 };
 baseUrl = urls[environment];
 

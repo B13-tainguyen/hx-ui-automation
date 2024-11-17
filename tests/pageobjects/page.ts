@@ -17,7 +17,13 @@ export default class Page {
   public clickElement = async (element: ChainablePromiseElement<WebdriverIO.Element>) => {
     await element.waitForDisplayed({ timeout: 60000 });
     await element.scrollIntoView();
-    const text = (await element).click();
+    await element.click();
+  };
+
+  public selectDropdownByAtrribute = async (element: ChainablePromiseElement<WebdriverIO.Element>, attributeName: string, value: string) => {
+    await element.waitForDisplayed({ timeout: 60000 });
+    await element.scrollIntoView();
+    await element.selectByAttribute(attributeName, value);
   };
 
   public isDisplayed = async (element: ChainablePromiseElement<WebdriverIO.Element>) => {
@@ -64,6 +70,15 @@ export default class Page {
   }
 
   public async waitForPageLoad() {
+    await browser.pause(2000); // This sleep is to wait for actual page load to start & then check for page load completed or not
+    await browser.waitUntil(async () => browser.execute(() => document.readyState === 'complete'), {
+      timeout: 60 * 1000, // 60 seconds
+      timeoutMsg: 'Page Failed to load: Timeout exceeded',
+      interval: 2000
+    });
+  }
+  
+  public async waitForClickable() {
     await browser.pause(2000); // This sleep is to wait for actual page load to start & then check for page load completed or not
     await browser.waitUntil(async () => browser.execute(() => document.readyState === 'complete'), {
       timeout: 60 * 1000, // 60 seconds
