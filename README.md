@@ -7,7 +7,7 @@ This boilerplate project has WebdriverIO 8 tests with cucumber and typescript, f
 - WebdriverIO v8
 - Cucumber v8
 
-## Test execution:=
+## Test execution:
 - Checkout the codebase
 - Install the packages using npm install (Yarn is more recommended)
 - Run the tests by using npm run wdio-\* (local/chrome/docker/appium/.......) Please refer the package.json scripts.
